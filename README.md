@@ -53,5 +53,5 @@ Trước khi triển khai, đảm bảo bạn đã cài đặt các công cụ v
 ### 6.2. Hướng dẫn cài đặt
 1. **Clone repository**:  
    ```bash
-   git clone https://github.com/MinhTrung9443/WebProject.git
+   git clone https://github.com/iamtien-cmd/CosmeticE-Commerce.git
 # CosmeticE-Commerce
