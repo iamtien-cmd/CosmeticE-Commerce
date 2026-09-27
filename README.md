@@ -1,57 +1,100 @@
-# Trang Web Bán Mỹ Phẩm - OneShop
+# Cosmetic E-Commerce – OneShop
 
-## 1. Giới thiệu
-**OneShop** là trang web thương mại điện tử hiện đại, được phát triển với **Java 21**, **Spring Boot 3**, và **Thymeleaf**. Dự án mang đến trải nghiệm duyệt, đánh giá và mua sắm mỹ phẩm dễ dàng.  
-Hệ thống sử dụng **JPA** và **Spring Security** để đảm bảo xác thực và phân quyền an toàn. Với giao diện trực quan, thân thiện, người dùng dễ dàng tìm kiếm, so sánh sản phẩm và thực hiện giao dịch với các tùy chọn thanh toán linh hoạt.
+## 1. Overview
 
----
+**OneShop** is a full-featured cosmetic e-commerce application built with **Java 21**, **Spring Boot 3**, and **Thymeleaf**. The system provides essential online shopping functionalities, allowing users to browse products, view details, leave reviews, and place orders.
 
-## 2. Điểm nổi bật
-- **Mô phỏng hoạt động thực tế**:  
-  Hệ thống được thiết kế như một trang web bán hàng chuyên nghiệp, giải quyết chính xác các nghiệp vụ thực tế.  
-- **Ứng dụng các nguyên tắc OOP mạnh mẽ**:  
-  Các mối quan hệ giữa các thực thể và thuộc tính được xác định chính xác.  
-  (Ví dụ: sản phẩm không có thuộc tính số lượng mà được quản lý qua kho).  
-- **Tính năng bảo mật tiên tiến**:
-  - Sử dụng **Spring Security** để xác thực và phân quyền người dùng.
-  - Kiểm tra trạng thái tài khoản (bị khóa hoặc không) bằng lớp tùy chỉnh khi đăng nhập.
-  - Tùy chỉnh xử lý đăng nhập thành công và thất bại.
-  - Gán vai trò cho người dùng khi đăng nhập bằng **OAuth2**.
+The application follows a layered architecture and uses **JPA** for data persistence and **Spring Security** for authentication and authorization. Its business logic is designed to reflect common e-commerce workflows, while the user interface focuses on providing a simple and convenient shopping experience.
 
 ---
 
-## 3. Công nghệ sử dụng
-- **Backend**: Java 21, Spring Boot 3, Spring Security
-- **Frontend**: Thymeleaf, HTML, CSS, JavaScript
-- **Cơ sở dữ liệu**: SQL Server
-- **ORM**: JPA (Java Persistence API)
-- **Quản lý phiên bản**: Git, GitHub
-- **Công cụ hỗ trợ**: Spring Boot, SQL Server
+## 2. Key Features
+
+* **E-commerce business workflows**
+
+  * Product browsing and searching
+  * Product comparison and reviews
+  * Shopping and order processing
+  * Multiple payment options
+  * Inventory management
+
+* **Object-Oriented Design**
+
+  * Models real-world entities and their relationships
+  * Separates product information from inventory management
+  * Applies OOP principles throughout the application
+
+* **Authentication & Authorization**
+
+  * User authentication with Spring Security
+  * Role-based access control
+  * Account status validation during login
+  * Custom authentication success and failure handling
+  * OAuth2 login with automatic role assignment
+  * Remember-me authentication using cookies
 
 ---
 
-## 4. Hỗ trợ nhiều loại xác thực
-- Đăng nhập mặc định của Spring Security.
-- Đăng nhập **Remember-me** sử dụng cookie.
+## 3. Tech Stack
+
+| Category        | Technologies                            |
+| --------------- | --------------------------------------- |
+| Backend         | Java 21, Spring Boot 3, Spring Security |
+| Frontend        | Thymeleaf, HTML, CSS, JavaScript        |
+| Database        | Microsoft SQL Server                    |
+| ORM             | JPA                                     |
+| Version Control | Git, GitHub                             |
+| Build Tool      | Maven                                   |
 
 ---
 
-## 5. Truy cập vào Web
-- Mở trình duyệt web của bạn và truy cập:  
-  `http://localhost:8080`
+## 4. Authentication
+
+OneShop supports multiple authentication mechanisms:
+
+* Standard username/password authentication with Spring Security
+* **Remember-me** authentication using cookies
+* **OAuth2** authentication
+* Role-based authorization for different types of users
+* Account status verification during authentication
 
 ---
 
-## 6. Cách triển khai dự án
-### 6.1. Yêu cầu cài đặt
-Trước khi triển khai, đảm bảo bạn đã cài đặt các công cụ và môi trường sau:
-- **Java Development Kit (JDK) 21**
-- **Apache Maven**
-- **SQL Server**
-- **Apache Tomcat (nếu không sử dụng embedded server của Spring Boot)**
+## 5. Running the Application
 
-### 6.2. Hướng dẫn cài đặt
-1. **Clone repository**:  
-   ```bash
-   git clone https://github.com/iamtien-cmd/CosmeticE-Commerce.git
-# CosmeticE-Commerce
+After successfully setting up the project, the application can be accessed at:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## 6. Getting Started
+
+### 6.1. Prerequisites
+
+Make sure the following tools are installed:
+
+* **JDK 21**
+* **Apache Maven**
+* **Microsoft SQL Server**
+* **Git**
+
+> Spring Boot's embedded server is used by default, so a separate Tomcat installation is not required.
+
+### 6.2. Clone the Repository
+
+```bash
+git clone https://github.com/iamtien-cmd/CosmeticE-Commerce.git
+```
+
+### 6.3. Run the Application
+
+Configure the database connection in the application's configuration file, then build and start the Spring Boot application using Maven.
+
+Once the application starts successfully, open:
+
+```text
+http://localhost:8080
+```
